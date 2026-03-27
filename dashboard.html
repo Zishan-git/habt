@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - HabitFlow</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🎯</span>
+                <span class="logo-text">HabitFlow</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="challenging.html" class="nav-link">Daily Challenge</a></li>
+                <li><a href="dashboard.html" class="nav-link active">Dashboard</a></li>
+                <li><a href="about.html" class="nav-link">About & Guide</a></li>
+                <li><a href="strict.html" class="nav-link">Strict Mode</a></li>
+                <li><a href="login.html" class="nav-link auth">Login</a></li>
+                <li><a href="signup.html" class="nav-link auth">Sign Up</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>📊 Your Dashboard</h1>
+            <p class="subtitle">Track your progress and celebrate your wins</p>
+        </header>
+
+        <!-- Main Stats -->
+        <section class="stats-grid">
+            <div class="stat-card stat-primary">
+                <div class="stat-icon">🔥</div>
+                <div class="stat-info">
+                    <span class="stat-label">Current Streak</span>
+                    <span class="stat-value" id="streakValue">0</span>
+                    <span class="stat-unit">days</span>
+                </div>
+            </div>
+
+            <div class="stat-card stat-success">
+                <div class="stat-icon">✓</div>
+                <div class="stat-info">
+                    <span class="stat-label">Habits Completed</span>
+                    <span class="stat-value" id="completedValue">0</span>
+                    <span class="stat-unit">total</span>
+                </div>
+            </div>
+
+            <div class="stat-card stat-warning">
+                <div class="stat-icon">📈</div>
+                <div class="stat-info">
+                    <span class="stat-label">Completion Rate</span>
+                    <span class="stat-value" id="rateValue">0</span>
+                    <span class="stat-unit">%</span>
+                </div>
+            </div>
+
+            <div class="stat-card stat-info">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-info">
+                    <span class="stat-label">Best Streak</span>
+                    <span class="stat-value" id="bestValue">0</span>
+                    <span class="stat-unit">days</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Progress Bar Section -->
+        <section class="progress-section">
+            <h2>This Month's Progress</h2>
+            <div class="progress-container">
+                <div class="progress-bar-wrapper">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <span class="progress-text" id="progressText">0% Complete</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calendar Section -->
+        <section class="calendar-section">
+            <h2>30-Day Habit Calendar</h2>
+            <div class="calendar-legend">
+                <span><span class="day-complete"></span> Completed</span>
+                <span><span class="day-incomplete"></span> Incomplete</span>
+                <span><span class="day-skipped"></span> Skipped</span>
+            </div>
+            <div class="habit-calendar" id="habitCalendar"></div>
+        </section>
+
+        <!-- Weekly Stats -->
+        <section class="weekly-section">
+            <h2>Weekly Overview</h2>
+            <div class="weekly-stats" id="weeklyStats"></div>
+        </section>
+
+        <!-- Motivational Messages -->
+        <section class="motivation-section">
+            <h2>Motivation Hub</h2>
+            <div class="motivation-cards" id="motivationCards"></div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>HabitFlow</h4>
+                <p>Your personal habit tracking companion.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Pages</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="challenging.html">Daily Challenge</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="about.html">About & Guide</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 HabitFlow. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="utils.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

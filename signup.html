@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - HabitFlow</title>
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+<div class="auth-container">
+    <div class="auth-card">
+        <div class="auth-header">
+            <h1>🎯 HabitFlow</h1>
+            <p>Create your account</p>
+        </div>
+
+        <form id="signupForm" onsubmit="return handleSignup(event);">
+
+            <!-- Username -->
+            <div class="form-group">
+                <label>Username:</label>
+                <input type="text" id="username" placeholder="Enter Username">
+                <p id="userError" class="error-msg"></p>
+            </div>
+
+            <!-- Contact -->
+            <div class="form-group">
+                <label>Contact Number:</label>
+                <input type="text" id="contact" placeholder="Enter 10 digit number">
+                <p id="contactError" class="error-msg"></p>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" id="email" placeholder="Enter Email">
+                <p id="emailError" class="error-msg"></p>
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label>Password:</label>
+                <input type="password" id="password" placeholder="Enter Password (6+ chars, letter + number)">
+                <p id="passError" class="error-msg"></p>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="form-group">
+                <label>Confirm Password:</label>
+                <input type="password" id="confirm" placeholder="Confirm Password">
+                <p id="confirmError" class="error-msg"></p>
+            </div>
+
+            <button type="submit" class="btn-submit">Sign Up</button>
+        </form>
+
+        <p class="auth-link">Already have an account? <a href="login.html">Log In</a></p>
+    </div>
+</div>
+
+<script>
+function validateSignup() {
+    const email = document.getElementById("signupEmail").value.trim();
+    const password = document.getElementById("signupPassword").value.trim();
+    const confirmPassword = document.getElementById("confirmPassword").value.trim();
+
+    const emailError = document.getElementById("emailError");
+    const passError = document.getElementById("passError");
+    const confirmError = document.getElementById("confirmError");
+
+    let isValid = true;
+
+    // Reset error messages
+    emailError.textContent = "";
+    passError.textContent = "";
+    confirmError.textContent = "";
+
+    // Basic validation
+    if (email === "") {
+        emailError.textContent = "Email is required";
+        isValid = false;
+    }
+    if (password === "") {
+        passError.textContent = "Password is required";
+        isValid = false;
+    }
+    if (confirmPassword === "") {
+        confirmError.textContent = "Confirm your password";
+        isValid = false;
+    }
+    if (password !== "" && confirmPassword !== "" && password !== confirmPassword) {
+        confirmError.textContent = "Passwords do not match";
+        isValid = false;
+    }
+
+    if (isValid) {
+        // ✅ Redirect immediately to login page after successful signup
+        window.location.href = "file:///C:/Arabic%20Learn/login.html"; 
+        return false; // Prevents default form submission
+    }
+
+    return false; // Stops form submission if invalid
+}
+</script>
+</body>
+</html>

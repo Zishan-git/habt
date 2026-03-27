@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Challenge - HabitFlow</title>
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="challenging.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">🎯</span>
+                <span class="logo-text">HabitFlow</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="challenging.html" class="nav-link active">Daily Challenge</a></li>
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="about.html" class="nav-link">About & Guide</a></li>
+                <li><a href="strict.html" class="nav-link">Strict Mode</a></li>
+                <li><a href="login.html" class="nav-link auth">Login</a></li>
+                <li><a href="signup.html" class="nav-link auth">Sign Up</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>⚡ Today's Daily Challenge</h1>
+            <p class="subtitle">Complete today's habit to build your streak!</p>
+        </header>
+
+        <div class="challenge-wrapper">
+            <!-- Habit Card -->
+            <div class="habit-card">
+                <div class="habit-header">
+                    <h2 id="habitTitle">Loading...</h2>
+                    <span class="day-indicator">Day <span id="dayNumber">1</span>/30</span>
+                </div>
+
+                <div class="habit-content">
+                    <div class="habit-icon" id="habitIcon">🎯</div>
+                    <div class="habit-details">
+                        <p class="habit-description" id="habitDescription">Loading today's challenge...</p>
+                        <div class="habit-meta">
+                            <span class="difficulty" id="habitDifficulty">Medium</span>
+                            <span class="duration" id="habitDuration">15 min</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="habit-benefits">
+                    <h4>Why This Habit?</h4>
+                    <p id="habitBenefit">Loading benefits...</p>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-secondary" id="skipBtn">Skip for Today</button>
+                    <button class="btn btn-primary" id="completeBtn">✓ Complete Habit</button>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="stats-box">
+                    <h3>Your Progress</h3>
+                    <div class="progress-item">
+                        <span>Current Streak</span>
+                        <strong id="streakCount">0</strong>
+                    </div>
+                    <div class="progress-item">
+                        <span>Habits Completed</span>
+                        <strong id="completedCount">0</strong>
+                    </div>
+                    <div class="progress-item">
+                        <span>Completion Rate</span>
+                        <strong id="completionRate">0%</strong>
+                    </div>
+                </div>
+
+                <div class="calendar-box">
+                    <h3>30-Day Calendar</h3>
+                    <div class="day-grid" id="dayGrid"></div>
+                </div>
+
+                <div class="tips-box">
+                    <h3>💡 Pro Tip</h3>
+                    <p id="proTip">Complete your habit at the same time every day to build a strong habit loop.</p>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>HabitFlow</h4>
+                <p>Your personal habit tracking companion.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Pages</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="challenging.html">Daily Challenge</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="about.html">About & Guide</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 HabitFlow. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="utils.js"></script>
+    <script src="challenging.js"></script>
+</body>
+</html>
