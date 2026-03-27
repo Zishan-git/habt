@@ -1,7 +1,7 @@
 const habits = [
     {
         day: 1,
-        title: "just stat",
+        title: "you do",
         icon: "🏃",
         description: "Go for a 30-minute jog or run to start your day with energy.",
         difficulty: "Medium",
