@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact – HabitFlow</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: #f5f5f4;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .card {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 2rem;
+      width: 100%;
+      max-width: 500px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    h1 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+    .field {
+      margin-bottom: 1rem;
+    }
+    label {
+      display: block;
+      font-size: 12px;
+      font-weight: 600;
+      color: #666;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      outline: none;
+      font-family: inherit;
+    }
+    input:focus, textarea:focus {
+      border-color: #534AB7;
+      box-shadow: 0 0 0 3px #EEEDFE;
+    }
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    button {
+      width: 100%;
+      height: 40px;
+      background: #534AB7;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+    button:hover { background: #3C3489; }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h1>Contact Us</h1>
+  <form onsubmit="return submitContact();">
+    <div class="field">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Zishan Shaikh">
+    </div>
+    <div class="field">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Zishanshaikh6207@gmail.com">
+    </div>
+    <div class="field">
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Write your message..."></textarea>
+    </div>
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+
+<script>
+
+</script>
+
+</body>
+</html>
