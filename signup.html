@@ -60,47 +60,56 @@
 </div>
 
 <script>
-function validateSignup() {
-    const email = document.getElementById("signupEmail").value.trim();
-    const password = document.getElementById("signupPassword").value.trim();
-    const confirmPassword = document.getElementById("confirmPassword").value.trim();
-
-    const emailError = document.getElementById("emailError");
-    const passError = document.getElementById("passError");
-    const confirmError = document.getElementById("confirmError");
+function validateForm(){
 
     let isValid = true;
 
-    // Reset error messages
-    emailError.textContent = "";
-    passError.textContent = "";
-    confirmError.textContent = "";
+ 
+    let username = document.getElementById("username").value;
+    let contact = document.getElementById("contact").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let confirm = document.getElementById("confirm").value;
 
-    // Basic validation
-    if (email === "") {
-        emailError.textContent = "Email is required";
-        isValid = false;
-    }
-    if (password === "") {
-        passError.textContent = "Password is required";
-        isValid = false;
-    }
-    if (confirmPassword === "") {
-        confirmError.textContent = "Confirm your password";
-        isValid = false;
-    }
-    if (password !== "" && confirmPassword !== "" && password !== confirmPassword) {
-        confirmError.textContent = "Passwords do not match";
+   
+
+
+
+    if(username.length < 4){
+        document.getElementById("userError").textContent = "Username must be 4+ characters";
         isValid = false;
     }
 
-    if (isValid) {
-        // ✅ Redirect immediately to login page after successful signup
-        window.location.href = "file:///C:/Arabic%20Learn/login.html"; 
-        return false; // Prevents default form submission
+  
+    let phonePattern = /^[0-9]{10}$/;
+    if(!phonePattern.test(contact)){
+        document.getElementById("contactError").textContent = "Invalid contact number";
+        isValid = false;
     }
 
-    return false; // Stops form submission if invalid
+   
+    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if(!emailPattern.test(email)){
+        document.getElementById("emailError").textContent = "Invalid email";
+        isValid = false;
+    }
+
+
+    if(password.length < 6){
+        document.getElementById("passError").textContent = "Password must be 6+ characters";
+        isValid = false;
+    }
+
+    if(password !== confirm){
+        document.getElementById("confirmError").textContent = "Passwords do not match";
+        isValid = false;
+    }
+
+    if(isValid){
+        alert("Form submitted successfully!");
+    }
+
+    return isValid;
 }
 </script>
 </body>
